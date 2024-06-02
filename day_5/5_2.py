@@ -28,7 +28,7 @@ with open('day_5/input.txt', 'r') as file:
     parsed_data = parse_data(file.read())
     lowest_loc = np.inf
     for i in range(0, len(parsed_data['seeds']), 2):
-        for j in range(len(parsed_data['seeds'])):
+        for j in range(parsed_data['seeds'][i+1] + 1):
             seed = parsed_data['seeds'][i] + j 
             input = seed
             for key, maps in parsed_data.items():
